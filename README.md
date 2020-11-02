@@ -1,2 +1,2 @@
-# Redux_by_Minin_forked
+# Redux_by_Minin
 Created with CodeSandbox
