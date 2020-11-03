@@ -1,29 +1,36 @@
-import {createStore} from './createStore'
-import './styles.css'
-import {rootReducer} from './redux/rootReducer'
+// import './styles.css'
 
-const counter = document.getElementById( 'counter' )
-const addBtn = document.getElementById( 'add' )
-const subBtn = document.getElementById( 'sub' )
-const asyncBtn = document.getElementById( 'acync' )
-const themeBtn = document.getElementById( 'theme' )
+// const counter = document.getElementById( 'counter' )
+// const addBtn = document.getElementById( 'add' )
+// const subBtn = document.getElementById( 'sub' )
+// const asyncBtn = document.getElementById( 'acync' )
+// const themeBtn = document.getElementById( 'theme' )
 
-const store = createStore(rootReducer, 0)
-})
+// let state = 0
 
-addBtn.addEventListener('click', () => {
-  
-})
+// function render() {
+// counter.textContent = state.toString()
+// }
 
-subBtn.addEventListener('click', () => {
- 
-})
+// addBtn.addEventListener(type: 'click', listner: () => {
+//   state++
+//   render()
+// })
 
-asyncBtn.addEventListener('click', () => {
-  setTimeout( () => {
+// subBtn.addEventListener(type: 'click', listner: () => {
+//   state--
+//   render()
+// })
 
-})
+// asyncBtn.addEventListener(type: 'click', listner: () => {
+//   setTimeout( handler: () => {
+//     state++
+//     render()
+//   }, timeout: 2000)
+// })
 
-themeBtn.addEventListener('click', () => {
-//  document.body.classList.toggle ('dark')
-})
+// themeBtn.addEventListener(type: 'click', listner: () => {
+//   document.body.classList.toggle (token: 'dark')
+//   render()import './styles.css'
+
+// render()

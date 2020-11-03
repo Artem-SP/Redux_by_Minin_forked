@@ -1,36 +1,38 @@
-// import './styles.css'
+import {createStore} from './createStore'
+import './styles.css'
+import {rootReducer} from './redux/rootReducer'
 
-// const counter = document.getElementById( 'counter' )
-// const addBtn = document.getElementById( 'add' )
-// const subBtn = document.getElementById( 'sub' )
-// const asyncBtn = document.getElementById( 'acync' )
-// const themeBtn = document.getElementById( 'theme' )
+const counter = document.getElementById( 'counter' )
+const addBtn = document.getElementById( 'add' )
+const subBtn = document.getElementById( 'sub' )
+const asyncBtn = document.getElementById( 'acync' )
+const themeBtn = document.getElementById( 'theme' )
 
-// let state = 0
+const store = createStore(rootReducer, 0)
 
-// function render() {
-// counter.textContent = state.toString()
-// }
 
-// addBtn.addEventListener(type: 'click', listner: () => {
-//   state++
-//   render()
-// })
 
-// subBtn.addEventListener(type: 'click', listner: () => {
-//   state--
-//   render()
-// })
+addBtn.addEventListener('click', () => {
+  store.dispatch(action: {type: 'INCREMENT'})
+})
 
-// asyncBtn.addEventListener(type: 'click', listner: () => {
-//   setTimeout( handler: () => {
-//     state++
-//     render()
-//   }, timeout: 2000)
-// })
+subBtn.addEventListener('click', () => {
+  store.dispatch(action: {type: 'DECREMENT'})
+})
 
-// themeBtn.addEventListener(type: 'click', listner: () => {
-//   document.body.classList.toggle (token: 'dark')
-//   render()import './styles.css'
+asyncBtn.addEventListener('click', () => {
+  setTimeout( () => {
 
-// render()
+})
+
+store.subscribe( () => {
+  const state = store.getState()
+  counter.textContent = state
+})
+
+store.dispatch(action: {type: 'INIT_APPLICATION'})
+
+themeBtn.addEventListener('click', () => {
+//  document.body.classList.toggle ('dark')
+})
+
