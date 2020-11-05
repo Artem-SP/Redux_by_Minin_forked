@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from "./types";
+import { INCREMENT, DECREMENT, CHAGE_THEME } from "./types";
 
 export function increment() {
   return {
@@ -9,6 +9,13 @@ export function increment() {
 export function decrement() {
   return {
     type: DECREMENT
+  };
+}
+
+export function cangeTheme(newTheme) {
+  return {
+    type: CHAGE_THEME,
+    payload: newTheme
   };
 }
 
